@@ -24,11 +24,11 @@ describe('Soldier', () => {
 
   describe('attack() method', () => {
     it('should be a declared', () => {
-      expect(typeof soldier.attack).toBe('function');
+      expect(typeof soldier.attack.bind(soldier)).toBe('function');
     });
 
     it('should receive 0 arguments', () => {
-      expect(soldier.attack.length).toEqual(0);
+      expect(soldier.attack.bind(soldier).length).toEqual(0);
     });
 
     it('should return the strength property of the Soldier', () => {
@@ -38,11 +38,11 @@ describe('Soldier', () => {
 
   describe('receiveDamage() method', () => {
     it('should be a declared', () => {
-      expect(typeof soldier.receiveDamage).toBe('function');
+      expect(typeof soldier.receiveDamage.bind(soldier)).toBe('function');
     });
 
     it('should receive 1 argument (the damage)', () => {
-      expect(soldier.receiveDamage.length).toEqual(1);
+      expect(soldier.receiveDamage.bind(soldier).length).toEqual(1);
     });
 
     it('should remove the received damage from the health property', () => {
@@ -90,11 +90,11 @@ describe('Viking', () => {
 
   describe('attack() method', () => {
     it('should be a declared', () => {
-      expect(typeof viking.attack).toBe('function');
+      expect(typeof viking.attack.bind(viking)).toBe('function');
     });
 
     it('should receive 0 arguments', () => {
-      expect(viking.attack.length).toEqual(0);
+      expect(viking.attack.bind(viking).length).toEqual(0);
     });
 
     it('should return the strength property of the Viking', () => {
@@ -104,11 +104,11 @@ describe('Viking', () => {
 
   describe('receiveDamage() method', () => {
     it('should be a declared', () => {
-      expect(typeof viking.receiveDamage).toBe('function');
+      expect(typeof viking.receiveDamage.bind(viking)).toBe('function');
     });
 
     it('should receive 1 argument (the damage)', () => {
-      expect(viking.receiveDamage.length).toEqual(1);
+      expect(viking.receiveDamage.bind(viking).length).toEqual(1);
     });
 
     it('should remove the received damage from the health property', () => {
@@ -173,11 +173,11 @@ describe('Saxon', () => {
 
   describe('attack() method', () => {
     it('should be a declared', () => {
-      expect(typeof saxon.attack).toBe('function');
+      expect(typeof saxon.attack.bind(saxon)).toBe('function');
     });
 
     it('should receive 0 arguments', () => {
-      expect(saxon.attack.length).toEqual(0);
+      expect(saxon.attack.bind(saxon).length).toEqual(0);
     });
 
     it('should return the strength property of the Saxon', () => {
@@ -187,11 +187,11 @@ describe('Saxon', () => {
 
   describe('receiveDamage() method', () => {
     it('should be a declared', () => {
-      expect(typeof saxon.receiveDamage).toBe('function');
+      expect(typeof saxon.receiveDamage.bind(saxon)).toBe('function');
     });
 
     it('should receive 1 argument (the damage)', () => {
-      expect(saxon.receiveDamage.length).toEqual(1);
+      expect(saxon.receiveDamage.bind(saxon).length).toEqual(1);
     });
 
     it('should remove the received damage from the health property', () => {
